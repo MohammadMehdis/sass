@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "sass": "^1.72.0"
+  },
+  "name": "travlog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1","start":"sass sass/style.scss style/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

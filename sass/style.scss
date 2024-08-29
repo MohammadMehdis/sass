@@ -1,0 +1,326 @@
+@use "./reset";
+@use "./object";
+@use "./font-family";
+@use "./Variable" as *;
+body {
+  main {
+    .hero {
+      header {
+        width: 100%;
+        height: 100vh;
+        background-image: url(../images/Rectangle.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include function(flex, column);
+        nav {
+          @include flex(flex, flex-end, center, row);
+          gap: 2em;
+          .nav_menu {
+            display: flex;
+            justify-content: space-between;
+            @include flex(flex, space-between, flex-start, row);
+            width: 584px;
+            li {
+              a {
+                font-family: Manrope-Bold;
+                font-size: 14px;
+                color: $text_b;
+              }
+              a:hover {
+                color: $text-hover;
+              }
+            }
+          }
+          .nav_btn {
+            .btn {
+              background-color: $btn;
+              color: $text_w;
+              width: 91px;
+              height: 40px;
+              font-family: Manrope-Bold;
+              font-size: 14px;
+              padding: 10px 20px;
+              border: none;
+              border-radius: 5px;
+              transition-duration: 0.5s;
+            }
+            .btn:hover {
+              background-color: $btn-hover;
+            }
+          }
+        }
+        .Introduction {
+          height: 100%;
+          @include flex(flex, flex-start, center, row);
+        }
+        .content_header {
+          @include flex(flex, space-between, flex-start, column);
+          width: 665px;
+          height: 406px;
+          .content_header__h1 {
+            height: 164px;
+            width: 100%;
+            h1 {
+              font-family: Manrope-ExtraBold;
+              font-size: 64px;
+              color: $text_b;
+            }
+          }
+          .content_header__p {
+            height: 99px;
+            width: 100%;
+            p {
+              font-family: Manrope-Regular;
+              font-size: 20px;
+              line-height: 36px;
+              color: $text_b;
+            }
+          }
+          .content_header__box {
+            @include flex(flex, space-between, center, row);
+            background-color: $text_w;
+            width: 480px;
+            height: 72px;
+            border-radius: 8px;
+            padding: 5px 8px 5px 32px;
+            .content_header__box___input {
+              border: none;
+              outline: none;
+              width: 50%;
+              ::placeholder {
+                font-family: Manrope-Regular;
+                font-size: 16px;
+                color: $text_b;
+              }
+            }
+            .content_header__box___btn {
+              .btn_box {
+                font-family: Manrope-bold;
+                font-size: 16px;
+                width: 136px;
+                height: 61px;
+                background-color: $btn;
+                color: $text_w;
+                border: none;
+                border-radius: 8px;
+                transition-duration: 0.5s;
+              }
+              .btn_box:hover {
+                background-color: $btn-hover;
+              }
+            }
+          }
+        }
+      }
+    }
+    .information {
+      width: 100%;
+      height: auto;
+      margin-top: 20px;
+      .information_text {
+        @include flex(flex, space-between, center, column);
+        height: 200px;
+        .information_text__h2 {
+          width: 428px;
+          h2 {
+            font-family: Manrope-ExtraBold;
+            font-size: 32px;
+            color: $text_b;
+            line-height: auto;
+          }
+        }
+        .information_text__p {
+          height: 110px;
+          width: 994px;
+          p {
+            font-family: Manrope-Regular;
+            font-size: 24px;
+            color: $text_b;
+            text-align: center;
+            line-height: 39px;
+          }
+        }
+      }
+      .information_news {
+        flex-wrap: wrap;
+        @include flex(flex, space-between, flex-end, row);
+        height: 805px;
+        padding: 0px 15px;
+        div {
+          @include flex(flex, flex-start, center, column);
+          h3 {
+            font-family: Manrope-ExtraBold;
+            font-size: 24px;
+            color: $text_b;
+            margin: 14px 0px;
+          }
+          p {
+            text-align: center;
+            font-family: Manrope-Regular;
+            font-size: 18px;
+            color: $text_b;
+            width: 316px;
+            height: 85px;
+            line-height: 28px;
+          }
+        }
+      }
+    }
+    .row {
+      background-image: url(../images/dwkdu5um1txk.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      @include flex(flex, center, center, column);
+      height: 480px;
+      margin-top: 15px;
+      .row_text {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        h4 {
+          font-family: Manrope-ExtraBold;
+          font-size: 48px;
+          color: $text_w;
+        }
+        p {
+          font-family: Manrope-Regular;
+          font-size: 18px;
+          color: $text_w;
+          margin-top: 10px;
+        }
+      }
+      .row_bottom {
+        height: 62px;
+        width: 100%;
+        @include flex(flex, space-between, center, row);
+        p {
+          text-align: center;
+          height: auto;
+          min-width: 16%;
+          font-family: Manrope-Bold;
+          font-size: 18px;
+          color: $text_w;
+          line-height: 31px;
+        }
+      }
+    }
+
+    .content_adver {
+      @include flex(flex, space-between, center, column);
+      padding: 5em 0px;
+      height: auto;
+      .box_bottom {
+        flex-direction: row-reverse !important;
+      }
+      .box_bottom__content {
+        align-items: flex-end !important;
+        .btn_container {
+          width: 520px;
+        }
+      }
+    }
+    .partner {
+      height: 550px;
+      background-color: #f4f5f7;
+      @include flex(flex, space-between, center, column);
+      .partner_box {
+        @include flex(flex, center, center, column);
+        text-align: center;
+        p {
+          font-family: Manrope-Medium;
+          font-size: 18px;
+          color: $text_p;
+          line-height: 32px;
+        }
+      }
+      .box_container {
+        @include flex(flex, center, center, row);
+      }
+    }
+    .user {
+      @include flex(flex, center, center, row);
+      height: 100vh;
+      width: 100%;
+      .user_content {
+        @include flex(flex, space-between, center, column);
+        width: 645px;
+        height: 314px;
+        img {
+          width: 140px;
+          height: 120px;
+        }
+        p {
+          font-family: Manrope-Medium;
+          font-size: 18px;
+        }
+        button {
+          align-self: center;
+        }
+      }
+    }
+    footer {
+      height: 536px;
+      background-image: url(../images/dwkdu5um1txk.png);
+      background-size: cover;
+      background-position: 0px -300px;
+      @include flex(flex, space-between, center, column);
+      .footer_content {
+        height: 304px;
+        width: 80vw;
+        display: flex;
+        justify-content: space-between;
+        @include flex(flex, space-between, flex-start, row);
+        div {
+          text-align: center;
+          @include flex(flex, space-between, flex-start, column);
+          h5 {
+            font-family: Manrope-Bold;
+            font-size: 16px;
+            color: $text_w;
+          }
+          p {
+            font-family: Manrope-Regular;
+            font-size: 16px;
+            color: $text_w;
+          }
+        }
+        .footer_content__left {
+          height: 304px;
+        }
+        .footer_content__center {
+          height: 248px;
+        }
+        .footer_content__betwen {
+          height: 192px;
+        }
+        .footer_content__right {
+          height: 136px;
+        }
+      }
+      .about {
+        display: flex;
+        width: 100%;
+        .inmod {
+          display: flex;
+          justify-content: flex-end;
+          align-items: flex-end;
+          @include flex(flex, flex-end, flex-end, row);
+          width: 70%;
+          h5 {
+            color: $text_w;
+            font-family: Manrope-Regular;
+            font-size: 16px;
+          }
+        }
+        .icon {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          @include flex(flex, flex-end, center, row);
+          width: 100%;
+        }
+      }
+    }
+  }
+}

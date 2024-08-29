@@ -1,0 +1,53 @@
+@use "./Variable" as *;
+.container {
+  padding: 35px 122px;
+}
+.style_content {
+  @include flex(flex, space-between, center, row);
+  height: 550px;
+  min-width: 100%;
+}
+.style_content__box {
+  @include flex(flex, space-between, center, column);
+  max-width: 520px;
+  height: 480px;
+}
+.btn_content {
+  background-color: $btn;
+  display: block;
+  width: 160px;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  color: $text_w;
+  transition-duration: 0.5s;
+  align-self: flex-start;
+}
+.btn_content__hover:hover {
+  background-color: $btn-hover;
+}
+.p_content {
+  font-family: Manrope-Regular;
+  font-size: 16px;
+  width: 523px;
+  height: 160px;
+  line-height: 32px;
+}
+.h_content {
+  width: 523px;
+  font-family: Manrope-Bold;
+  font-size: 64px;
+}
+.style_img {
+  min-width: 504px;
+}
+.style_box {
+  @include flex(flex, space-between, center, column);
+  img {
+    width: 170px;
+  }
+}
+.h_content_box {
+  font-family: Manrope-ExtraBold;
+  font-size: 48px;
+}

@@ -1,0 +1,16 @@
+@mixin flex($flex, $justify-content, $align-items, $flex-direction) {
+  display: $flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-direction: $flex-direction;
+}
+@mixin function ($flex,$flex-direction){
+  display: $flex;
+  flex-direction: $flex-direction;
+}
+$btn: #f84646;
+$btn-hover: #41c9e2;
+$text_w: #ffffff;
+$text_b: #000000;
+$text-hover: #1f2121b0;
+$text_p: #18191f;
